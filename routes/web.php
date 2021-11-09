@@ -27,3 +27,5 @@ Route::get('/home', [
 
 
 Route::resource('riceInfoInPhils', App\Http\Controllers\RiceInfoInPhilController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);

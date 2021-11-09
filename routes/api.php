@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('phil-rice-info',[\App\Http\Controllers\API\RiceOfThePhilControllerAPI::class,'index']);
+Route::post('login',[\App\Http\Controllers\API\RiceOfThePhilControllerAPI::class,'login']);
+Route::post('register',[\App\Http\Controllers\API\RiceOfThePhilControllerAPI::class,'register']);
+Route::post('reset-password',[\App\Http\Controllers\API\RiceOfThePhilControllerAPI::class,'resetPassword']);
