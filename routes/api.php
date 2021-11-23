@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\RiceOfThePhilPostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('login',[\App\Http\Controllers\API\RiceOfThePhilControllerAPI::class,'login']);
 Route::post('register',[\App\Http\Controllers\API\RiceOfThePhilControllerAPI::class,'register']);
 Route::post('reset-password',[\App\Http\Controllers\API\RiceOfThePhilControllerAPI::class,'resetPassword']);
+
+
+Route::get('get-all-posts',[RiceOfThePhilPostController::class,'getAllPosts']);
+Route::get('get-post',[RiceOfThePhilPostController::class,'getPost']);
+Route::get('search-post',[RiceOfThePhilPostController::class,'searchPost']);
